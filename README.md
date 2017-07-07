@@ -7,7 +7,7 @@ reduce负责对map输出的文件进行处理，每个reduce处理自己负责�
 
 # 2 代码实现
 原始代码有两个目录：main和mapreduce。其中main目录下只需要关注`wc.go，ii.go以及一系列的txt文件`。 mapreduce目录则需要修改`schedule.go`，`common_map.go`和`common_reduce.go`文件。
-##Part 1， Part 2
+## Part 1， Part 2
 这两个实验都比较简单，单机的。Part 1实现common_map.go和common_reduce.go中的通用函数，而Part 2也只是统计单词数目。Part 2这里要注意的是，要使用实验文档中说的分割方法`unicode.IsLetter()`去分割单词，不然测试会无法通过。
 
 ## Part 3 
