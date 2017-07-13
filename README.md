@@ -1,4 +1,6 @@
 # mit6.824-2017-mapreduce
+> MIT6.824 2017课程作业的lab1，实现mapreduce。框架代码来自 [git://g.csail.mit.edu/6.824-golabs-2017](git://g.csail.mit.edu/6.824-golabs-2017)
+
 # 1 MapReduce基础概念
 map 负责分发。每个map任务通常处理一个文件，有多少个输入文件就有多少个map任务。而输出则根据reduce的数目确定有多少个输出。注意，相同的key肯定是输出到同一个reduce文件中，通过哈希算法来确认一个key应该分发到哪个中间文件。targetReduct = ihash(key) % nReduce。
 总的中间文件数为 nMap * nReduce
